@@ -1,0 +1,142 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --a-text-button-font-family: "Arial", Helvetica;
+  --a-text-button-font-size: 16px;
+  --a-text-button-font-style: normal;
+  --a-text-button-font-weight: 400;
+  --a-text-button-letter-spacing: 0px;
+  --a-text-button-line-height: 24px;
+  --ds-app-primaria03: rgba(19, 91, 158, 1);
+  --ds-app-primaria05: rgba(209, 230, 250, 1);
+  --ds-so-coreserror-600: rgba(236, 21, 41, 1);
+  --ds-so-coresneutral-900: rgba(32, 35, 39, 1);
+  --DS-SO-fontes-16pt-body-text-font-family: "Roboto", Helvetica;
+  --DS-SO-fontes-16pt-body-text-font-size: 16px;
+  --DS-SO-fontes-16pt-body-text-font-style: normal;
+  --DS-SO-fontes-16pt-body-text-font-weight: 400;
+  --DS-SO-fontes-16pt-body-text-letter-spacing: 0px;
+  --DS-SO-fontes-16pt-body-text-line-height: 24px;
+  --h3-text-subtitle-font-family: "Arial", Helvetica;
+  --h3-text-subtitle-font-size: 20px;
+  --h3-text-subtitle-font-style: normal;
+  --h3-text-subtitle-font-weight: 700;
+  --h3-text-subtitle-letter-spacing: 0px;
+  --h3-text-subtitle-line-height: 28px;
+  --h4-text-title-font-family: "Arial", Helvetica;
+  --h4-text-title-font-size: 16px;
+  --h4-text-title-font-style: normal;
+  --h4-text-title-font-weight: 700;
+  --h4-text-title-letter-spacing: 0px;
+  --h4-text-title-line-height: 24px;
+  --h6-text-font-family: "Arial", Helvetica;
+  --h6-text-font-size: 14px;
+  --h6-text-font-style: normal;
+  --h6-text-font-weight: 400;
+  --h6-text-letter-spacing: 0px;
+  --h6-text-line-height: 22px;
+  --p-text-font-family: "Arial", Helvetica;
+  --p-text-font-size: 16px;
+  --p-text-font-style: normal;
+  --p-text-font-weight: 400;
+  --p-text-letter-spacing: 0px;
+  --p-text-line-height: 24px;
+  --web-error-0: rgba(236, 21, 41, 1);
+  --web-neutral-0: rgba(255, 255, 255, 1);
+  --web-neutral-100: rgba(249, 249, 249, 1);
+  --web-neutral-300: rgba(217, 217, 217, 1);
+  --web-neutral-400: rgba(45, 45, 45, 1);
+  --web-neutral-800: rgba(80, 82, 81, 1);
+  --web-primary-100-default: rgba(0, 45, 75, 1);
+  --web-secondary-100-default: rgba(252, 252, 27, 1);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

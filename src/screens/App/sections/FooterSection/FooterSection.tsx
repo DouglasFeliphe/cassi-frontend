@@ -1,48 +1,48 @@
-import React from "react";
-import { Separator } from "../../../../components/ui/separator";
+import React from 'react';
+import { Separator } from '@/components/ui/separator';
 
 export const FooterSection = (): JSX.Element => {
   // Footer navigation data
   const footerLinks = [
     {
-      title: "Home",
+      title: 'Home',
       links: [],
     },
     {
-      title: "Conheça a CASSI",
+      title: 'Conheça a CASSI',
       links: [
-        "Institucional",
-        "Informações financeiras",
-        "Governança corporativa",
-        "Como trabalhamos",
-        "Faça parte da nossa equipe",
+        'Institucional',
+        'Informações financeiras',
+        'Governança corporativa',
+        'Como trabalhamos',
+        'Faça parte da nossa equipe',
       ],
     },
     {
-      title: "Nossos Planos",
+      title: 'Nossos Planos',
       links: [
-        "Plano CASSI Essencial",
-        "Plano CASSI Família",
-        "Plano CASSI Vida",
-        "Quero contratar",
-        "Plano de Associados",
+        'Plano CASSI Essencial',
+        'Plano CASSI Família',
+        'Plano CASSI Vida',
+        'Quero contratar',
+        'Plano de Associados',
       ],
     },
     {
-      title: "Já tenho um plano CASSI",
-      links: ["Cobertura do meu plano", "Cronogramas", "Telemedicina"],
+      title: 'Já tenho um plano CASSI',
+      links: ['Cobertura do meu plano', 'Cronogramas', 'Telemedicina'],
     },
     {
-      title: "CliniCASSI",
-      links: ["Atenção Primária Saúde", "Localize sua CliniCASSI"],
+      title: 'CliniCASSI',
+      links: ['Atenção Primária Saúde', 'Localize sua CliniCASSI'],
     },
   ];
 
   // Social media icons
   const socialIcons = [
-    { name: "Facebook", src: "/intersect.svg" },
-    { name: "LinkedIn", src: "/linkedin-escuro.svg" },
-    { name: "Instagram", src: "/instagram-escuro.svg" },
+    { name: 'Facebook', src: '/intersect.svg' },
+    { name: 'LinkedIn', src: '/linkedin-escuro.svg' },
+    { name: 'Instagram', src: '/instagram-escuro.svg' },
   ];
 
   return (

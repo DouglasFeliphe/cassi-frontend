@@ -1,14 +1,13 @@
 import { SearchIcon } from 'lucide-react';
-import React from 'react';
-import { Button } from '../../../../components/ui/button';
-import { Input } from '../../../../components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from '../../../../components/ui/navigation-menu';
+} from '@/components/ui/navigation-menu';
 
 // Define navigation menu items for better maintainability
 const navItems = [

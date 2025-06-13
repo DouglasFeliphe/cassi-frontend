@@ -1,6 +1,8 @@
-import { SearchIcon } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { HeaderButton } from '@/components/ui/custom-button';
 import { Input } from '@/components/ui/input';
+import { SocialIcon } from '@/components/ui/social-icon';
+import { SmallText } from '@/components/ui/typography';
+import { SearchIcon } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,7 +11,6 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 
-// Define navigation menu items for better maintainability
 const navItems = [
   { label: 'Home', hasDropdown: false },
   { label: 'Conheça a CASSI', hasDropdown: true },
@@ -17,6 +18,12 @@ const navItems = [
   { label: 'Já tenho um plano CASSI', hasDropdown: true },
   { label: 'CliniCASSI', hasDropdown: true },
   { label: 'Fale com a CASSI', hasDropdown: false },
+];
+
+const socialIcons = [
+  { src: '/intersect.svg', alt: 'Facebook Icon' },
+  { src: '/linkedin-escuro.svg', alt: 'LinkedIn Icon' },
+  { src: '/instagram-claro.svg', alt: 'Instagram Icon' },
 ];
 
 export const HeaderSection = (): JSX.Element => {
@@ -32,7 +39,7 @@ export const HeaderSection = (): JSX.Element => {
             src="/web-logo-cassi.svg"
           />
 
-          {/* SearchIcon bar */}
+          {/* Search bar */}
           <div className="flex items-center h-[50px] gap-2.5 p-2.5 bg-web-neutral-0 rounded border border-solid border-[#d9d9d9]">
             <SearchIcon className="w-[26px] h-[26px] text-web-neutral-400" />
             <Input
@@ -43,39 +50,17 @@ export const HeaderSection = (): JSX.Element => {
 
           {/* Social media section */}
           <div className="flex items-center gap-6">
-            <p className="font-h6-text text-web-neutral-400 text-[length:var(--h6-text-font-size)] tracking-[var(--h6-text-letter-spacing)] leading-[var(--h6-text-line-height)]">
-              Siga a CASSI nas redes sociais:
-            </p>
+            <SmallText>Siga a CASSI nas redes sociais:</SmallText>
 
             <div className="flex items-center gap-6">
-              {/* Facebook icon */}
-              <div className="bg-web-primary-100-default flex items-center justify-center w-6 h-6 rounded-full">
-                <div className="relative w-3.5 h-3.5 bg-web-primary-100-default rounded-[7px]">
-                  <img
-                    className="absolute w-1.5 h-[11px] top-[3px] left-1"
-                    alt="Facebook Icon"
-                    src="/intersect.svg"
-                  />
-                </div>
-              </div>
-
-              {/* LinkedIn icon */}
-              <div className="bg-web-primary-100-default flex items-center justify-center w-6 h-6 rounded-full">
-                <img
-                  className="w-3.5 h-3.5"
-                  alt="LinkedIn Icon"
-                  src="/linkedin-escuro.svg"
+              {socialIcons.map((icon, index) => (
+                <SocialIcon
+                  key={index}
+                  src={icon.src}
+                  alt={icon.alt}
+                  variant="header"
                 />
-              </div>
-
-              {/* Instagram icon */}
-              <div className="bg-web-primary-100-default flex items-center justify-center w-6 h-6 rounded-full">
-                <img
-                  className="w-3.5 h-3.5"
-                  alt="Instagram Icon"
-                  src="/instagram-claro.svg"
-                />
-              </div>
+              ))}
             </div>
           </div>
 
@@ -92,9 +77,7 @@ export const HeaderSection = (): JSX.Element => {
           </div>
 
           {/* Login button */}
-          <Button className="bg-[#002d4b] text-web-neutral-0 font-a-text-button text-[length:var(--a-text-button-font-size)] tracking-[var(--a-text-button-letter-spacing)] leading-[var(--a-text-button-line-height)] hover:bg-[#003a61]">
-            Fazer login
-          </Button>
+          <HeaderButton>Fazer login</HeaderButton>
         </div>
       </div>
 

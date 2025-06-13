@@ -1,50 +1,48 @@
-import React from 'react';
 import { Separator } from '@/components/ui/separator';
+import { SocialIcon } from '@/components/ui/social-icon';
+
+const footerLinks = [
+  {
+    title: 'Home',
+    links: [],
+  },
+  {
+    title: 'Conheça a CASSI',
+    links: [
+      'Institucional',
+      'Informações financeiras',
+      'Governança corporativa',
+      'Como trabalhamos',
+      'Faça parte da nossa equipe',
+    ],
+  },
+  {
+    title: 'Nossos Planos',
+    links: [
+      'Plano CASSI Essencial',
+      'Plano CASSI Família',
+      'Plano CASSI Vida',
+      'Quero contratar',
+      'Plano de Associados',
+    ],
+  },
+  {
+    title: 'Já tenho um plano CASSI',
+    links: ['Cobertura do meu plano', 'Cronogramas', 'Telemedicina'],
+  },
+  {
+    title: 'CliniCASSI',
+    links: ['Atenção Primária Saúde', 'Localize sua CliniCASSI'],
+  },
+];
+
+const socialIcons = [
+  { name: 'Facebook', src: '/intersect.svg' },
+  { name: 'LinkedIn', src: '/linkedin-escuro.svg' },
+  { name: 'Instagram', src: '/instagram-escuro.svg' },
+];
 
 export const FooterSection = (): JSX.Element => {
-  // Footer navigation data
-  const footerLinks = [
-    {
-      title: 'Home',
-      links: [],
-    },
-    {
-      title: 'Conheça a CASSI',
-      links: [
-        'Institucional',
-        'Informações financeiras',
-        'Governança corporativa',
-        'Como trabalhamos',
-        'Faça parte da nossa equipe',
-      ],
-    },
-    {
-      title: 'Nossos Planos',
-      links: [
-        'Plano CASSI Essencial',
-        'Plano CASSI Família',
-        'Plano CASSI Vida',
-        'Quero contratar',
-        'Plano de Associados',
-      ],
-    },
-    {
-      title: 'Já tenho um plano CASSI',
-      links: ['Cobertura do meu plano', 'Cronogramas', 'Telemedicina'],
-    },
-    {
-      title: 'CliniCASSI',
-      links: ['Atenção Primária Saúde', 'Localize sua CliniCASSI'],
-    },
-  ];
-
-  // Social media icons
-  const socialIcons = [
-    { name: 'Facebook', src: '/intersect.svg' },
-    { name: 'LinkedIn', src: '/linkedin-escuro.svg' },
-    { name: 'Instagram', src: '/instagram-escuro.svg' },
-  ];
-
   return (
     <footer className="flex flex-col items-center gap-8 px-20 py-10 w-full bg-web-primary-100-default">
       <div className="flex max-w-screen-xl items-center justify-between w-full">
@@ -56,12 +54,12 @@ export const FooterSection = (): JSX.Element => {
 
         <div className="flex items-center gap-6">
           {socialIcons.map((icon, index) => (
-            <div
+            <SocialIcon
               key={index}
-              className="bg-web-neutral-0 flex items-center justify-center w-6 h-6 rounded-full"
-            >
-              <img className="w-3.5 h-3.5" alt={icon.name} src={icon.src} />
-            </div>
+              src={icon.src}
+              alt={icon.name}
+              variant="footer"
+            />
           ))}
         </div>
       </div>

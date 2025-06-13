@@ -1,4 +1,3 @@
-import React from 'react';
 import { FooterSection } from './sections/FooterSection';
 import { HeaderSection } from './sections/HeaderSection/HeaderSection';
 import { MainContentSection } from './sections/MainContentSection';
